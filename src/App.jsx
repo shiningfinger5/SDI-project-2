@@ -1,15 +1,21 @@
 import { useState } from 'react'
 // import './App.css'
 import Homepage from './Homepage.jsx'
+import NavBar from './Navbar.jsx'
+import DisplayShows from './DisplayShows.jsx'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  // const [count, setCount] = useState(0)
+  const [selectedGenre, setSelectedGenre] = useState("Drama")
   return (
     <>
-     <h1>Terrific TV Time</h1>
-    <Homepage />
+      <div className = 'NavContainer'>
+      <NavBar setSelectedGenre={setSelectedGenre} />
+      <Homepage />
+      <DisplayShows selectedGenre={selectedGenre} />
+      
+      </div>
     </>
   )
 }
