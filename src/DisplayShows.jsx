@@ -36,14 +36,14 @@ function DisplayShows({ selectedGenre }) {
 
   return (
     <div>
-      <h2>{selectedGenre} Shows</h2>
+      <h2 style={{ textDecoration: 'underline' }}>{selectedGenre} Shows</h2>
 
       <ul className = "tvContainer">
         {filteredShows.map((tvObject) => {
           return (
             
             <li className = "tvCard" key={tvObject.id}>
-              <strong>Name: {tvObject.name} </strong>
+              <strong className ="tvDisplayTitle"> {tvObject.name} </strong>
               <br/>
               <strong>Genre:</strong> {tvObject.genres.join(", ")}
               <br/>
