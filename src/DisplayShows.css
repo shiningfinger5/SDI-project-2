@@ -1,0 +1,66 @@
+.tvContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+}
+
+.tvCard {
+  width: 30%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 2px solid #8F95D3;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #DBB1BC;
+  color: #58504A;
+  margin-bottom: 6px;
+}
+
+.tvPoster {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.detailsPage {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.detailsCard {
+  width: 60%;
+  background-color: #DBB1BC;
+  color: #58504A;
+  border: 3px solid #8F95D3;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.detailsBox {
+  background-color: #D3C4E3;
+  border: 2px solid #8F95D3;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 12px 0;
+  text-align: center;
+}
+
+.detailsTitle {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.detailsPoster {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 20px auto 0;
+}

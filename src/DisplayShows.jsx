@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import './DisplayShows.css'
+
 
 function DisplayShows({ selectedGenre }) {
   const Url = "https://api.tvmaze.com/shows?page=";
@@ -23,7 +26,7 @@ function DisplayShows({ selectedGenre }) {
           const allShows = pages.flat();
           setTvList(allShows);
         })
-  })
+  }, []);
   
 
 
@@ -35,19 +38,25 @@ function DisplayShows({ selectedGenre }) {
     <div>
       <h2>{selectedGenre} Shows</h2>
 
-      <ul>
+      <ul className = "tvContainer">
         {filteredShows.map((tvObject) => {
           return (
-            <li key={tvObject.id}>
-              Name: {tvObject.name} - Genre: {tvObject.genres.join(", ")} Rating:{" "}
-              {tvObject.rating.average}
-
+            
+            <li className = "tvCard" key={tvObject.id}>
+              <strong>Name: {tvObject.name} </strong>
+              <br/>
+              <strong>Genre:</strong> {tvObject.genres.join(", ")}
+              <br/>
+              <strong>Rating:</strong>{" "} {tvObject.rating.average}
+              <br/>
               {tvObject.image && (
-                <img
-                  className="tvPoster"
-                  src={tvObject.image.medium}
-                  alt="tv Poster"
-                />
+                <Link to={`/show/${tvObject.id}`}>
+                  <img
+                    className="tvPoster"
+                    src={tvObject.image.medium}
+                    alt="tv Poster"
+                  />
+                </Link>
               )}
             </li>
           );

@@ -1,8 +1,7 @@
 // /useContext can be used on navBar. just have the 6 genres be a button on it.
-
+import './App.css'
 import { Link } from "react-router-dom"
 import './Navbar.css'
-// import DisplayShows from './DisplayShows.jsx'
 
 function NavBar({setSelectedGenre}) {
   return (
